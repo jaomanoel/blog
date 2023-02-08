@@ -20,6 +20,7 @@ public class Post implements Serializable {
     @Column(nullable = false)
     private LocalDate date;
     @Column(nullable = false, unique = false)
+    @Lob
     private String description;
 
     public UUID getId() {
