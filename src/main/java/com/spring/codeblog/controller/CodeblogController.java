@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class CodeblogController {
@@ -16,11 +17,12 @@ public class CodeblogController {
     @Autowired
     CodeblogService codeblogService;
 
-    @RequestMapping(value = "/posts", method = RequestMethod.POST)
+    @RequestMapping(value = "/posts", method = RequestMethod.GET)
     public ModelAndView getPost(){
         ModelAndView mv = new ModelAndView("posts");
-        List<Post> postList = codeblogService.findAll();
-        mv.addObject("posts", postList);
+        List<Post> posts = codeblogService.findAll();
+        UUID id = UUID.fromString("8b5fc622-a1e7-4cfe-8af4-48f1071a6fa6");
+        mv.addObject("posts", posts);
         return mv;
     }
 }
