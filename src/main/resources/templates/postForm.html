@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="pt-br" xmlns:th="http://thymeleaf.org">
     <head>
         <meta charset="utf-8">
@@ -16,9 +15,9 @@
                     </a>
 
                     <div class="d-flex align-items-center" style="gap: 12px">
-                        <a href="/newpost" class="btn btn-primary">Add Post</a>
+                        <a href="/posts" class="btn btn-primary">Home</a>
 
-                        <form class="d-flex" role="search">
+                        <form class="d-flex m-0" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
@@ -35,33 +34,30 @@
                         <a href="/posts" style="text-decoration: none;">Home</a>
                     </li>
 
-                    <li class="breadcrumb-item active" aria-current="page">Post</li>
+                    <li class="breadcrumb-item active" aria-current="page">New Post</li>
                 </ol>
             </nav>
 
-            <article style="width: 100%; padding-bottom: 20px">
-                <h1 class="card-title" style="font-weight: bold; padding-bottom: 20px;">
-                    <span th:text="${post.getTitle()}"></span>
-                </h1>
+            <div>
+                <form method="post" style="gap: 20px; display: flex; flex-direction: column;">
+                    <div class="form-group" style="width: 100%">
+                        <input type="text" class="form-control" name="title" placeholder="Titulo *" />
+                    </div>
 
-                <p class="card-subtitle mb-2 text-muted">
-                    <i class="material-icons">person_outline</i>
-                    <span th:text="${post.getAuthor()}"></span>
+                    <div class="form-group" style="width: 100%">
+                        <input type="text" class="form-control" name="author" placeholder="Autor *" />
+                    </div>
 
-                    <br>
+                    <textarea type="text" class="form-control" name="desc" placeholder="Texto *"></textarea>
 
-                    <i class="material-icons">date_range</i>
-                    <span th:text="${post.getDate()}"></span>
-                </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+                        <small class="form-text text-muted">(*) Campos obrigatorios</small>
 
-                <section>
-                    <p class="card-text" style="margin-top: 40px">
-                        <span th:utext="${post.getDesc()}"></span>
-                    </p>
-                </section>
-            </article>
+                        <button type="submit" class="btn btn-primary">Publicar</button>
+                    </div>
+                </form>
+            </div>
         </main>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>
