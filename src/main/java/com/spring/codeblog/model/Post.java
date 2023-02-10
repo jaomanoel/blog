@@ -1,6 +1,7 @@
 package com.spring.codeblog.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -13,15 +14,18 @@ public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
+    @NotNull
     @Column(nullable = false, length = 130, unique = false)
     private String title;
+    @NotNull
     @Column(nullable = false, unique = false)
     private String author;
     @Column(nullable = false)
     private LocalDate date;
     @Column(nullable = false, unique = false)
+    @NotNull
     @Lob
-    private String description;
+    private String description; // desc
 
     public UUID getId() {
         return id;
