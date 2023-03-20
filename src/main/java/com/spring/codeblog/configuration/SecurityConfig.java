@@ -1,5 +1,6 @@
 package com.spring.codeblog.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
     }
 
-    @Bean
+    @Autowired
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withDefaultPasswordEncoder().username("jao").password("123").roles("ADMIN").build());
