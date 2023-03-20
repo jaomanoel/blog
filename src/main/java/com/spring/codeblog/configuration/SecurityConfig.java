@@ -10,12 +10,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig {
 
     private static final String[] AUTH_LIST = {
             "/",
@@ -23,8 +24,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/posts/{id}"
     };
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    @Bean
+    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
             .csrf().disable()
             .authorizeRequests()
@@ -34,9 +35,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .formLogin().permitAll()
             .and()
             .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+
+        return http.build();
     }
 
-    @Autowired
+    @Bean
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withDefaultPasswordEncoder().username("jao").password("123").roles("ADMIN").build());
