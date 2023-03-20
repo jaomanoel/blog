@@ -1,0 +1,71 @@
+[33mcommit 5ddebcc70ba518785211d6431a4d67a85d19ca6b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Fri Feb 10 15:22:38 2023 -0300
+
+    Created summernote
+
+[33mcommit a2906a013f90755af6834c2ba84a1d1ca751ab68[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Fri Feb 10 15:12:03 2023 -0300
+
+    Created template valid message
+
+[33mcommit 94f446ca939616cdcfc3239d52f3f709cf0666f1[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Thu Feb 9 22:40:41 2023 -0300
+
+    Created /newpost method GET and POST
+
+[33mcommit 34cb1b0b48dbc88a97ac4ed2feebb2af48473e69[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Thu Feb 9 00:58:57 2023 -0300
+
+    Created template getPostById
+
+[33mcommit 321d3bd31e97a004c79a19b21a69c414dad28fac[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 23:30:38 2023 -0300
+
+    Created Template posts
+
+[33mcommit 2f9789a58c9c8b0a376d189096b398ffad092576[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 20:09:48 2023 -0300
+
+    Created Controller getPosts
+
+[33mcommit 2e2347b05ad4ece9875684b52f0c35e6b24d5eb8[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 20:02:12 2023 -0300
+
+    Created Dummy Data
+
+[33mcommit f92656f389a0dece5e10a1136957816e15b3d709[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 19:47:43 2023 -0300
+
+    Created CodeBlog Service
+
+[33mcommit 57757c037160435fc63a7a10ad0fa317cf1bba49[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 19:38:48 2023 -0300
+
+    Created Post Model
+
+[33mcommit dd9bf58246824caa3aafe5635e60d2e38602137c[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 19:29:55 2023 -0300
+
+    Created Post Model
+
+[33mcommit 6ced9b015e4c71f28980d771c32943afc9654900[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 18:27:19 2023 -0300
+
+    DB Connection
+
+[33mcommit f2c1b20618f019c93da2829e96c62dd2cd165e0c[m
+Author: jaomanoel <89238095+jaomanoel@users.noreply.github.com>
+Date:   Wed Feb 8 17:44:45 2023 -0300
+
+    First Commit

@@ -30,7 +30,7 @@ public class CodeblogController {
         return mv;
     }
 
-    @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/posts/{id}", method = RequestMethod.GET)
     public ModelAndView getPostDetails(@PathVariable("id") UUID id){
         ModelAndView mv = new ModelAndView("postDetails");
         Post post = codeblogService.findById(id);
